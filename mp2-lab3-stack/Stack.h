@@ -62,5 +62,6 @@ public:
 			throw -1;
 		array[size]=el;
 		size++;
-	}
+
+	} 
 };
