@@ -7,6 +7,12 @@
 *.o
 *.obj
 
+# Visual
+*.user
+*.sdf
+*.opensdf
+*.suo
+
 # Precompiled Headers
 *.gch
 *.pch
