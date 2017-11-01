@@ -1,9 +1,9 @@
 
 template <class T>
 class TStack {
-	int maxsize;
-	int size;
-	T* array;
+	int maxsize;		//Размер стека
+	int size;			//Число элементов в стеке
+	T* array;	
 public:
 	TStack<T> (int _msize=200) {
 		array=new T[_msize];
@@ -34,29 +34,38 @@ public:
 		return (*this);
 	}
 
-	int IsFull() {
+	//Проверка на переполнение
+	int IsFull()			
+	{
 		if(size==maxsize)
 			return 1;
 		else
 			return 0;
 	}
-	int IsEmpty() {
+	//Проверка на пустоту
+	int IsEmpty()			
+	{
 		if(size==0)
 			return 0;
 		else 
 			return 1;
 	}
-	T Top(){
+	//Посмотреть последний элемент стека
+	T Top()					
+	{
 		if(IsEmpty())
 			throw -1;
 		return array[size-1];
 	}
-	T Pop() {
+	//Достать элемент из стека
+	T Pop()					
+	{
 		if(IsEmpty())
 			throw -1;
 		size--;
 		return array[size];
 	}
+	//Добавить элемент в стек
 	void Push(const T& el){
 		if(IsFull())
 			throw -1;
@@ -64,4 +73,8 @@ public:
 		size++;
 
 	} 
+	//Очистить стек
+	void Clear() {
+		size=0;
+	}
 };
