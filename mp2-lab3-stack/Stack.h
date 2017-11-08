@@ -53,14 +53,14 @@ public:
 	//Посмотреть последний элемент стека
 	T Top()					
 	{
-		if(IsEmpty())
+		if(!IsEmpty())
 			throw -1;
 		return array[size-1];
 	}
 	//Достать элемент из стека
 	T Pop()					
 	{
-		if(IsEmpty())
+		if(!IsEmpty())
 			throw -1;
 		size--;
 		return array[size];

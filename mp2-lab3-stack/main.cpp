@@ -1,10 +1,19 @@
 #include <iostream>
-#include "Stack.h"
+#include "Calk.h"
 using namespace std;
+
 
 void main () {
 
-	TStack<int> s;
+	string inf="2*6+8", inf2="2-8";
+	TCalk Calk(inf);
 
-	cout << "hi" << endl;
+	cout << "inf: " << inf << endl;
+	cout << "inf2: " << inf2 << endl;
+	cout << "Infix: " <<Calk.GetInfix() << endl;
+	Calk.ToPostfix();
+	cout << "Postfix: " <<Calk.GetPostfix() << endl;
+	cout << "Result: " <<Calk.CCalk() << endl;
+	Calk.SetInfix(inf2);
+	cout << "SetInfix2: " << Calk.GetInfix() << endl;
 }

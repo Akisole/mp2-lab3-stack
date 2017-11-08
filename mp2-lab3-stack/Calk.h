@@ -7,11 +7,17 @@ class TCalk {
 	string infix;
 	string postfix;
 	TStack<char> StCh;
+	TStack<double> StD;
 public:
-	
+	TCalk (string _inf="");
 
+	bool Cheek();				//Проверка корректности скобок
+	int Priority(char ch);		//Получение приоритета операций
+	void ToPostfix();			//Конвертация в постфиксную записть
+	double CCalk();				//Вычисление выражения
 
-	bool Cheek();		//Проверка корректности скобок
-	void ToPostfix();	//Конвертация в постфиксную записть
+	string GetInfix();			//Получение инфиксной строки
+	string GetPostfix();		//Получение постфиксной строки
+	void SetInfix(string _inf);	//Запись строки в инфиксную
 
 };
