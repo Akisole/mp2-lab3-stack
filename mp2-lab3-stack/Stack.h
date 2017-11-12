@@ -5,7 +5,9 @@ class TStack {
 	int size;			//Число элементов в стеке
 	T* array;	
 public:
-	TStack<T> (int _msize=200) {
+	TStack<T> (int _msize) {
+		if (_msize<0)
+			throw -1;
 		array=new T[_msize];
 		maxsize=_msize;
 		size=0;
@@ -46,21 +48,21 @@ public:
 	int IsEmpty()			
 	{
 		if(size==0)
-			return 0;
-		else 
 			return 1;
+		else 
+			return 0;
 	}
 	//Посмотреть последний элемент стека
 	T Top()					
 	{
-		if(!IsEmpty())
+		if(IsEmpty())
 			throw -1;
 		return array[size-1];
 	}
 	//Достать элемент из стека
 	T Pop()					
 	{
-		if(!IsEmpty())
+		if(IsEmpty())
 			throw -1;
 		size--;
 		return array[size];

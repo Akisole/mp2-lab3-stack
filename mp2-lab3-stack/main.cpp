@@ -5,8 +5,11 @@ using namespace std;
 
 void main () {
 
-	string inf="2*6+8", inf2="2-8";
-	TCalk Calk(inf);
+	string inf="2*6+8", inf1="2*6+8)", inf2="2-8";
+	TCalk Calk(inf), Calk2(inf1);
+	TStack<int> A(200);
+
+	cout << Calk2.Cheek() << endl;
 
 	cout << "inf: " << inf << endl;
 	cout << "inf2: " << inf2 << endl;
