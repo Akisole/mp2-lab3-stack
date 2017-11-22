@@ -67,6 +67,7 @@ void TCalk::ToPostfix() {
 double TCalk::CCalk(){
 	if(Cheek()){
 		StD.Clear();
+		ToPostfix();
 		for(int i=0; i<postfix.size(); i++){
 			if(postfix[i]=='+' || postfix[i]=='-' || postfix[i]=='*' || postfix[i]=='/' || postfix[i]=='^') {
 				double op1, op2, res;
