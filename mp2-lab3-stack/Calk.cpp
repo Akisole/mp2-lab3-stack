@@ -6,8 +6,7 @@ TCalk::TCalk(string _inf): StCh(100), StD(100){
 		postfix="";
 	}
 
-
-bool TCalk::Cheek(){
+int TCalk::Cheek(){
 	StCh.Clear();
 	for(int i=0; i<infix.size(); i++) {
 		if(infix[i]=='(')
@@ -17,14 +16,14 @@ bool TCalk::Cheek(){
 				StCh.Push('(');			//Проверку на переполенние
 		if(infix[i]==')') 
 			if(StCh.IsEmpty())
-				return false;
+				return 0;
 			else
 				StCh.Pop();
 	}
 	if(!StCh.IsEmpty())
-		return false;
+		return 0;
 	else
-		return true;
+		return 1;
 }
 int TCalk::Priority(char ch){
 	int res;
@@ -47,27 +46,32 @@ void TCalk::ToPostfix() {
 	for(int i=0; i<buf.size(); i++) {
 		if(buf[i]=='(')
 			StCh.Push('(');
-		if(buf[i]>='0' && buf[i]<='9' || buf[i]=='.')
+		else if(buf[i]>='0' && buf[i]<='9' || buf[i]=='.')
 			postfix += buf[i];
-		if(buf[i]==')') {
+		else if(buf[i]==')') {
 			char el=StCh.Pop();
 			while(el!='(') {
 				postfix += el;
 				el=StCh.Pop();
 			}
 		}
-		if (buf[i]=='+' || buf[i]=='-' || buf[i]=='*' || buf[i]=='/' || buf[i]=='^') {
+		else if (buf[i]=='+' || buf[i]=='-' || buf[i]=='*' || buf[i]=='/' || buf[i]=='^') {
 			postfix += " ";
 			while(Priority(buf[i]) <= Priority(StCh.Top()) )
 				postfix+=StCh.Pop();
 			StCh.Push(buf[i]);
 		}
+		else if (buf[i]==' ')
+			;
+		else
+			throw -1;
 	}
 }
 double TCalk::CCalk(){
 	if(Cheek()){
 		StD.Clear();
 		ToPostfix();
+	//	char tmp="";
 		for(int i=0; i<postfix.size(); i++){
 			if(postfix[i]=='+' || postfix[i]=='-' || postfix[i]=='*' || postfix[i]=='/' || postfix[i]=='^') {
 				double op1, op2, res;
@@ -90,6 +94,7 @@ double TCalk::CCalk(){
 				i+=j-1;
 				StD.Push(res);
 			}
+
 		}
 		//Проверка стека на наличие одного лишь элемента
 		return StD.Pop();

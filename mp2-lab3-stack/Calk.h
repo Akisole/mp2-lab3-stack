@@ -11,7 +11,7 @@ class TCalk {
 public:
 	TCalk (string _inf="");
 
-	bool Cheek();				//Проверка корректности скобок
+	int Cheek();				//Проверка корректности скобок
 	int Priority(char ch);		//Получение приоритета операций
 	void ToPostfix();			//Конвертация в постфиксную записть
 	double CCalk();				//Вычисление выражения
