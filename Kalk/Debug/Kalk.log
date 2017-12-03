@@ -1,0 +1,18 @@
+﻿Построение начато 03.12.2017 12:26:08.
+     1>Проект "G:\visual studio 2012 Projects\mp2-lab3-stack\Kalk\Kalk.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         G:\visual studio 2012\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Kalk.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Kalk.cpp
+         Kalk.cpp
+       Link:
+         G:\visual studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\visual studio 2012 Projects\mp2-lab3-stack\Debug\Kalk.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Kalk.Form1.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\visual studio 2012 Projects\mp2-lab3-stack\Debug\Kalk.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Calk.obj
+         Debug\Kalk.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         Kalk.vcxproj -> G:\visual studio 2012 Projects\mp2-lab3-stack\Debug\Kalk.exe
+     1>Построение проекта "G:\visual studio 2012 Projects\mp2-lab3-stack\Kalk\Kalk.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:02.23
